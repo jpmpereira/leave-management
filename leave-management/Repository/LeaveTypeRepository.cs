@@ -39,7 +39,7 @@ namespace leave_management.Repository
             return leaveType;
         }
 
-      
+
 
         public bool Save()
         {
@@ -55,6 +55,10 @@ namespace leave_management.Repository
         public ICollection<LeaveType> GetEmployeesByLeaveType(int id)
         {
             throw new NotImplementedException();
+        }
+        public bool IfExists(int Id)
+        {
+            return _db.LeaveTypes.Any(l => l.Id == Id);
         }
     }
 }
