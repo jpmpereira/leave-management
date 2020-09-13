@@ -32,6 +32,7 @@ namespace leave_management
         }
         public static void SeedRoles(RoleManager<IdentityRole> roleManager)
         {
+
             if (!roleManager.RoleExistsAsync("Administrator").Result)
             {
                 var role = new IdentityRole
